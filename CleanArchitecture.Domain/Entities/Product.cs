@@ -47,7 +47,7 @@ namespace CleanArchitecture.Domain.Entities
             DomainExceptionValidation.When(stock < 0,
                 "Invalid object state. Stock quantity is negative.");
 
-            DomainExceptionValidation.When(image.Length > 250,
+            DomainExceptionValidation.When(image?.Length > 250,
                 "Invalid object state. Image name has more then 250 characteres.");
 
             Name = name;
