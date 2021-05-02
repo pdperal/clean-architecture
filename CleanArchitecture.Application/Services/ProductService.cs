@@ -3,8 +3,6 @@ using CleanArchitecture.Application.DTOS;
 using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.Products.Commands;
 using CleanArchitecture.Application.Products.Queries;
-using CleanArchitecture.Domain.Entities;
-using CleanArchitecture.Domain.Interfaces;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -30,13 +28,6 @@ namespace CleanArchitecture.Application.Services
         }
 
         public async Task<ProductDTO> GetByIdAsync(int? id)
-        {
-            var data = await _mediator.Send(new GetProductByIdQuery(id.Value));
-
-            return _mapper.Map<ProductDTO>(data);
-        }
-
-        public async Task<ProductDTO> GetProductCategorie(int? id)
         {
             var data = await _mediator.Send(new GetProductByIdQuery(id.Value));
 
