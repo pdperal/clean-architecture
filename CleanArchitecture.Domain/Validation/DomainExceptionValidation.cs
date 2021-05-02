@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture.Domain.Validation
 {
-    class DomainExceptionValidation : Exception
+    public class DomainExceptionValidation : Exception
     {
         public DomainExceptionValidation(string message) : base(message)
         {
@@ -12,7 +12,7 @@ namespace CleanArchitecture.Domain.Validation
         {
             if (hasError)
             {
-                throw new Exception(error);
+                throw new DomainExceptionValidation(error);
             }
         }
     }

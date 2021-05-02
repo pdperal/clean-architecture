@@ -26,7 +26,7 @@ namespace CleanArchitecture.Domain.Entities
             DomainExceptionValidation.When(string.IsNullOrEmpty(name),
                 "Invalid object state. Name is required.");
 
-            DomainExceptionValidation.When(name.Length < 3,
+            DomainExceptionValidation.When(name.Length <= 3,
                 "Invalid object state. Name requires at least 3 characteres.");
 
             Name = name;
