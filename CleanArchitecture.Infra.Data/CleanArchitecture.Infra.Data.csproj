@@ -9,9 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EntitiesConfiguration\" />
     <Folder Include="Data\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
