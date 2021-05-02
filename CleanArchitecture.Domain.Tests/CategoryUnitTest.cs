@@ -26,7 +26,7 @@ namespace CleanArchitecture.Domain.Tests
 
             action.Should()
                 .Throw<DomainExceptionValidation>()
-                .WithMessage("Invalid object state. Id is required.");
+                .WithMessage("Invalid object state. Id is invalid.");
         }
 
         [Fact]

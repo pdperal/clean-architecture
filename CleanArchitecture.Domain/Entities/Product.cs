@@ -20,7 +20,7 @@ namespace CleanArchitecture.Domain.Entities
         public Product(int id, string name, string description, decimal price, int stock, string image)
         {
             DomainExceptionValidation.When(id < 0,
-                "Invalid object state. Id is required.");
+                "Invalid object state. Id is invalid.");
 
             ValidateDomain(name, description, price, stock, image);
 
